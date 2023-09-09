@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Сайт Michaelchik</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            overflow: hidden;
+        }
+        .welcome {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 48px;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        .social-links {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            padding: 20px;
+            font-size: 24px;
+        }
+        table {
+            width: 100%;
+        }
+        td {
+            text-align: center;
+            padding: 10px;
+        }
+        .social-links a {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            background-color: #004b87;
+            border-radius: 5px;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+        .social-links a:hover {
+            background-color: #0099cc;
+        }
+
+        button {
+            display: block;
+            margin-top: 20px;
+            font-size: 24px;
+            padding: 10px 20px;
+            background-color: #004b87;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; display: block; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeOut {
+            0% { opacity: 1; display: block; }
+            100% { opacity: 0; display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome">
+        Michaelchik
+        <button onclick="showSocialLinks()">More information</button>
+    </div>
+    
+    <div class="social-links">
+        <table>
+            <tr>
+                <td><a href="https://www.tiktok.com/@themichaelchik" target="_blank">TikTok</a></td>
+                <td><a href="https://t.me/TheMichaelchik" target="_blank">Telegram</a></td>
+            </tr>
+            <tr>
+                <td><a href="https://www.instagram.com/themichaelchik_/" target="_blank">Instagram</a></td>
+                <td><a href="https://discord.gg/7b33yYAHVn" target="_blank">Discord</a></td>
+            </tr>
+            <tr>
+                <td colspan="2"><a href="https://steamcommunity.com/id/s_v_e_n_d_e_r/" target="_blank">Steam</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function showSocialLinks() {
+            const welcomeText = document.querySelector(".welcome");
+            welcomeText.style.animation = "fadeOut 1s ease-in-out forwards";
+
+            const button = document.querySelector("button");
+            button.style.animation = "fadeOut 1s ease-in-out forwards";
+
+            const socialLinks = document.querySelector(".social-links");
+            socialLinks.style.animation = "fadeIn 1s ease-in-out forwards";
+            socialLinks.style.display = "block";
+        }
+    </script>
+</body>
+</html>
+
