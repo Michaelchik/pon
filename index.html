@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Сайт Michaelchik</title>
+    <title>Michaelchik (c)</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,7 +17,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 48px;
+            font-size: 144px; /* Увеличенный размер текста */
             animation: fadeIn 1s ease-in-out forwards;
         }
         .social-links {
@@ -70,12 +70,21 @@
             0% { opacity: 1; display: block; }
             100% { opacity: 0; display: none; }
         }
+
+        @media screen and (max-width: 600px) {
+            .welcome {
+                font-size: 72px; /* Уменьшенный размер текста для мобильных устройств */
+            }
+            .social-links {
+                font-size: 16px; /* Уменьшенный размер текста для мобильных устройств */
+            }
+        }
     </style>
 </head>
 <body>
     <div class="welcome">
         Michaelchik
-        <button onclick="showSocialLinks()">More information</button>
+        <button onclick="showSocialLinks()">Нажми, чтобы узнать больше</button>
     </div>
     
     <div class="social-links">
@@ -109,4 +118,5 @@
     </script>
 </body>
 </html>
+
 
